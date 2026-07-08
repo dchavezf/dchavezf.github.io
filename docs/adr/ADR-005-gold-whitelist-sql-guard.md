@@ -3,7 +3,7 @@
 > **Status:** Accepted
 > **Date:** 2026-07-08
 > **Decision Makers:** Daniel Chávez Flores
-> **Project:** [Project 3 — Warehouse Copilot: GenAI over Governed Data](../../projects/genai-rag-warehouse.md)
+> **Project:** [Project 3 — Warehouse Copilot: GenAI over Governed Data](/projects/genai-rag-warehouse/)
 
 ## Context
 
@@ -44,5 +44,5 @@ Adopt a **multi-layered SQL safety architecture**:
 ## References
 
 - [sqlglot — SQL parser and transpiler](https://github.com/tobymao/sqlglot)
-- [Project 3 — Methodology](../../projects/genai-rag-warehouse.md#3--what-is-the-methodology)
+- [Project 3 — Methodology](/projects/genai-rag-warehouse/#3--what-is-the-methodology)
 - [ADR-006](ADR-006-deterministic-lineage-over-llm-generation.md) — Related decision on lineage handling

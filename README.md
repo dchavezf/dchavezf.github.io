@@ -8,9 +8,9 @@ This portfolio demonstrates, in reviewable documents and code, three architectur
 
 | # | Project | Core Stack |
 |---|---------|------------|
-| 1 | [Enterprise O2C & MDM Resolution Platform](https://dchavezf.github.io/projects/dbt-o2c-mdm.html) | dbt Core · Snowflake/BigQuery · SQL · Jinja |
-| 2 | [Multi-Source Ingestion Platform with IaC](https://dchavezf.github.io/projects/airflow-iac-pipeline.html) | Airflow · Terraform · Python · GitHub Actions |
-| 3 | [Warehouse Copilot — GenAI over Governed Data](https://dchavezf.github.io/projects/genai-rag-warehouse.html) | Python · Claude API · dbt artifacts · vector search |
+| 1 | [Enterprise O2C & MDM Resolution Platform](https://dchavezf.github.io/projects/dbt-o2c-mdm/) | dbt Core · Snowflake/BigQuery · SQL · Jinja |
+| 2 | [Multi-Source Ingestion Platform with IaC](https://dchavezf.github.io/projects/airflow-iac-pipeline/) | Airflow · Terraform · Python · GitHub Actions |
+| 3 | [Warehouse Copilot — GenAI over Governed Data](https://dchavezf.github.io/projects/genai-rag-warehouse/) | Python · Claude API · dbt artifacts · vector search |
 
 Each project page answers five questions explicitly: the business problem, the tools, the methodology, where the code lives, and the quantified outcome.
 
@@ -21,17 +21,20 @@ Every significant technical choice is documented as a formal ADR in [`/docs/adr/
 ## Repository Structure
 
 ```
-├── index.md                    # Landing page (portfolio home)
+├── index.html                  # Homepage (hero + post feed)
+├── _tabs/                      # Navigation tabs (Portfolio, Library, About)
+├── _data/                      # Social links, share config
+├── _plugins/                   # Chirpy plugins
 ├── projects/                   # Project detail pages
 │   ├── dbt-o2c-mdm.md          # Project 1: Transformation & Modeling
 │   ├── airflow-iac-pipeline.md # Project 2: Ingestion & Infrastructure
 │   └── genai-rag-warehouse.md  # Project 3: GenAI Warehouse Copilot
 ├── docs/adr/                   # Architecture Decision Records
 ├── _posts/                     # Blog: thought leadership articles
-├── _includes/head.html         # Custom head (Mermaid.js integration)
-├── assets/css/style.scss       # Custom theme overrides
-├── .github/workflows/          # CI/CD (Jekyll build & deploy)
-└── _config.yml                 # Jekyll configuration
+├── assets/css/
+│   └── jekyll-theme-chirpy.scss # Custom theme overrides
+├── .github/workflows/          # CI/CD (Chirpy build & deploy)
+└── _config.yml                 # Chirpy configuration
 ```
 
 ## Contact

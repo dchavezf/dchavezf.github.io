@@ -1,16 +1,17 @@
 ---
 layout: page
 title: "Project 2 · Airflow + Terraform"
-permalink: /projects/airflow-iac-pipeline.html
 description: >-
   Config-driven multi-source ingestion platform with Airflow orchestration,
   Terraform IaC, data contracts, and CI/CD — extracting from 20 regional ERPs
   into a governed data lake and warehouse.
+categories: [Portfolio, DataOps]
+tags: [airflow, terraform, python, s3, gcs, github-actions, data-contracts]
 ---
 
 # Multi-Source Ingestion Platform with Infrastructure-as-Code
 
-> **Portfolio project 2 of 3** · [← Portfolio home](../index.html) · Previous: [dbt O2C & MDM](dbt-o2c-mdm.html) · Next: [Warehouse Copilot →](genai-rag-warehouse.html)
+> **Portfolio project 2 of 3** · [← Portfolio home](/portfolio/) · Previous: [dbt O2C & MDM](/projects/dbt-o2c-mdm/) · Next: [Warehouse Copilot →](/projects/genai-rag-warehouse/)
 >
 > **Stack:** Apache Airflow · Terraform · Python · S3/GCS · Snowflake/BigQuery · GitHub Actions
 > **Code repository:** 🚧 *implementation in progress — spec-first, the design below is the contract the code will be verified against*
@@ -30,7 +31,7 @@ description: >-
 
 ## Executive Summary (90 seconds)
 
-[Project 1](dbt-o2c-mdm.html) assumed raw ERP data "arrives" in the warehouse. In real enterprises, that assumption is where projects die: extraction is a pile of undocumented scripts on someone's VM, environments are hand-built and drift apart, and the first sign of a broken feed is an executive asking why yesterday's numbers are missing.
+[Project 1](/projects/dbt-o2c-mdm/) assumed raw ERP data "arrives" in the warehouse. In real enterprises, that assumption is where projects die: extraction is a pile of undocumented scripts on someone's VM, environments are hand-built and drift apart, and the first sign of a broken feed is an executive asking why yesterday's numbers are missing.
 
 This project builds the **ingestion and infrastructure layer** for MeridianTrade Group: Airflow-orchestrated, idempotent EL pipelines that replicate 20 regional SQL Server ERPs into a cloud data lake and load them into the warehouse — with **every piece of infrastructure defined in Terraform**, promoted through identical dev/staging/prod environments by CI/CD.
 
@@ -157,4 +158,4 @@ Modeled on the production platform this reproduces (a GCP/BigQuery estate where 
 - 📧 **Email:** [dchavezf@gmail.com](mailto:dchavezf@gmail.com)
 - 🐙 **GitHub:** [github.com/dchavezf](https://github.com/dchavezf)
 
-*Next in the platform: [Project 3 — Warehouse Copilot: GenAI over Governed Data →](genai-rag-warehouse.html)*
+*Next in the platform: [Project 3 — Warehouse Copilot: GenAI over Governed Data →](/projects/genai-rag-warehouse/)*

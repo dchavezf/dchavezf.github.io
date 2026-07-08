@@ -3,7 +3,7 @@
 > **Status:** Accepted
 > **Date:** 2026-07-08
 > **Decision Makers:** Daniel Chávez Flores
-> **Project:** [Project 1 — Enterprise O2C & MDM Resolution Platform](../../projects/dbt-o2c-mdm.md)
+> **Project:** [Project 1 — Enterprise O2C & MDM Resolution Platform](/projects/dbt-o2c-mdm/)
 
 ## Context
 
@@ -37,4 +37,4 @@ Adopt a **Medallion architecture (Bronze/Silver/Gold) with Kimball dimensional m
 
 - Kimball Group: [The Data Warehouse Toolkit](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/)
 - [Databricks Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture)
-- [Project 1 — Methodology](../../projects/dbt-o2c-mdm.md#3--what-is-the-methodology)
+- [Project 1 — Methodology](/projects/dbt-o2c-mdm/#3--what-is-the-methodology)

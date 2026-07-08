@@ -3,7 +3,7 @@
 > **Status:** Accepted
 > **Date:** 2026-07-08
 > **Decision Makers:** Daniel Chávez Flores
-> **Project:** [Project 3 — Warehouse Copilot: GenAI over Governed Data](../../projects/genai-rag-warehouse.md)
+> **Project:** [Project 3 — Warehouse Copilot: GenAI over Governed Data](/projects/genai-rag-warehouse/)
 
 ## Context
 
@@ -38,5 +38,5 @@ Adopt **deterministic graph traversal** for all lineage questions. The manifest 
 ## References
 
 - [dbt manifest.json schema](https://docs.getdbt.com/reference/artifacts/manifest-json)
-- [Project 3 — Methodology](../../projects/genai-rag-warehouse.md#3--what-is-the-methodology)
+- [Project 3 — Methodology](/projects/genai-rag-warehouse/#3--what-is-the-methodology)
 - [ADR-005](ADR-005-gold-whitelist-sql-guard.md) — Related decision on SQL safety

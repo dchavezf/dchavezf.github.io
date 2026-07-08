@@ -1,16 +1,17 @@
 ---
 layout: page
 title: "Project 1 · dbt O2C & MDM"
-permalink: /projects/dbt-o2c-mdm.html
 description: >-
   Enterprise Order-to-Cash transformation and Master Data Management resolution
   platform using dbt Core, Medallion architecture, and Kimball dimensional modeling
   across 20 regional ERPs.
+categories: [Portfolio, Architecture]
+tags: [dbt, snowflake, bigquery, kimball, medallion, mdm, sql, jinja]
 ---
 
 # Enterprise Order-to-Cash & MDM Resolution Platform
 
-> **Portfolio project 1 of 3** · [← Portfolio home](../index.html) · Next: [Ingestion Platform with IaC →](airflow-iac-pipeline.html)
+> **Portfolio project 1 of 3** · [← Portfolio home](/portfolio/) · Next: [Ingestion Platform with IaC →](/projects/airflow-iac-pipeline/)
 >
 > **Stack:** dbt Core · Snowflake / BigQuery · SQL · Jinja macros
 > **Code repository:** [github.com/dchavezf/marts_order_cycle](https://github.com/dchavezf/marts_order_cycle)
@@ -167,4 +168,4 @@ Modeled on the real Fortune 500 engagement this project reproduces (a 10TB / 20-
 - 📧 **Email:** [dchavezf@gmail.com](mailto:dchavezf@gmail.com)
 - 🐙 **GitHub:** [github.com/dchavezf](https://github.com/dchavezf)
 
-*Next in the platform: [Project 2 — Multi-Source Ingestion Platform with IaC →](airflow-iac-pipeline.html)*
+*Next in the platform: [Project 2 — Multi-Source Ingestion Platform with IaC →](/projects/airflow-iac-pipeline/)*

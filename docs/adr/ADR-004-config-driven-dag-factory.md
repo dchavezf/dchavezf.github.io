@@ -3,7 +3,7 @@
 > **Status:** Accepted
 > **Date:** 2026-07-08
 > **Decision Makers:** Daniel Chávez Flores
-> **Project:** [Project 2 — Multi-Source Ingestion Platform with IaC](../../projects/airflow-iac-pipeline.md)
+> **Project:** [Project 2 — Multi-Source Ingestion Platform with IaC](/projects/airflow-iac-pipeline/)
 
 ## Context
 
@@ -38,4 +38,4 @@ Adopt a **config-driven DAG factory pattern**. A single Python module reads regi
 ## References
 
 - [Astronomer: Dynamically Generating DAGs](https://www.astronomer.io/guides/dynamically-generating-dags/)
-- [Project 2 — Methodology](../../projects/airflow-iac-pipeline.md#3--what-is-the-methodology)
+- [Project 2 — Methodology](/projects/airflow-iac-pipeline/#3--what-is-the-methodology)

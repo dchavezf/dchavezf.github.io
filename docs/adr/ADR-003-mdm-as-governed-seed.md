@@ -3,7 +3,7 @@
 > **Status:** Accepted
 > **Date:** 2026-07-08
 > **Decision Makers:** Daniel Chávez Flores
-> **Project:** [Project 1 — Enterprise O2C & MDM Resolution Platform](../../projects/dbt-o2c-mdm.md)
+> **Project:** [Project 1 — Enterprise O2C & MDM Resolution Platform](/projects/dbt-o2c-mdm/)
 
 ## Context
 
@@ -38,5 +38,5 @@ Adopt **deterministic identity resolution via a governed dbt seed** (`mdm_custom
 
 ## References
 
-- [Project 1 — MDM architecture](../../projects/dbt-o2c-mdm.md#3--what-is-the-methodology)
+- [Project 1 — MDM architecture](/projects/dbt-o2c-mdm/#3--what-is-the-methodology)
 - [ADR-002](ADR-002-medallion-kimball-over-data-vault.md) — Related decision on modeling methodology

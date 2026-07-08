@@ -3,7 +3,7 @@
 > **Status:** Accepted
 > **Date:** 2026-07-08
 > **Decision Makers:** Daniel Chávez Flores
-> **Project:** [Project 1 — Enterprise O2C & MDM Resolution Platform](../../projects/dbt-o2c-mdm.md)
+> **Project:** [Project 1 — Enterprise O2C & MDM Resolution Platform](/projects/dbt-o2c-mdm/)
 
 ## Context
 
@@ -31,9 +31,9 @@ Adopt **ELT** with **dbt Core** as the transformation framework. All transformat
 
 ### Neutral
 
-- The ELT pattern assumes a reliable ingestion layer delivers raw data into the warehouse — this dependency is addressed by [Project 2](../../projects/airflow-iac-pipeline.md).
+- The ELT pattern assumes a reliable ingestion layer delivers raw data into the warehouse — this dependency is addressed by [Project 2](/projects/airflow-iac-pipeline/).
 
 ## References
 
 - [dbt Core documentation](https://docs.getdbt.com/)
-- [Project 1 — Methodology](../../projects/dbt-o2c-mdm.md#3--what-is-the-methodology)
+- [Project 1 — Methodology](/projects/dbt-o2c-mdm/#3--what-is-the-methodology)

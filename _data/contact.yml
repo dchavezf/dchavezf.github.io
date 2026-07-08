@@ -1,0 +1,14 @@
+- type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://mx.linkedin.com/in/dchavezf"
+
+- type: github
+  icon: "fab fa-github"
+
+- type: email
+  icon: "fas fa-envelope"
+  noblank: true
+
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Why Medallion + Kimball Over Data Vault 2.0 for a 20-Country Migration"
 date: 2026-07-08
+categories: [Architecture]
+tags: [dbt, kimball, medallion, data-vault, mdm, modeling]
 description: >-
   An architectural decision walkthrough: choosing Medallion + Kimball dimensional
   modeling over Data Vault 2.0 for a multinational ERP consolidation, and when
@@ -18,7 +20,7 @@ When consolidating 20 regional ERPs into a single data platform, one of the firs
 
 MeridianTrade Group (the fictional enterprise behind this portfolio's three projects) grew by acquisition. Each country runs its own SQL Server ERP: same vendor, different schemas, different business rules, different customer numbering. The mandate: consolidate into a single analytical platform within two quarters.
 
-The transformation engine ([Project 1]({{ site.baseurl }}/projects/dbt-o2c-mdm.html)) needs a modeling methodology that handles:
+The transformation engine ([Project 1](/projects/dbt-o2c-mdm/)) needs a modeling methodology that handles:
 
 - **20 heterogeneous sources** with colliding identifiers
 - **Historical tracking** of master data changes (Tax IDs, credit terms)
