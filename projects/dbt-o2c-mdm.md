@@ -13,7 +13,7 @@ description: >-
 > **Portfolio project 1 of 3** · [← Portfolio home](../index.html) · Next: [Ingestion Platform with IaC →](airflow-iac-pipeline.html)
 >
 > **Stack:** dbt Core · Snowflake / BigQuery · SQL · Jinja macros
-> **Code repository:** 🚧 *implementation in progress — spec-first, the design below is the contract the code will be verified against*
+> **Code repository:** [github.com/dchavezf/marts_order_cycle](https://github.com/dchavezf/marts_order_cycle)
 
 ## Contents
 
@@ -132,12 +132,12 @@ flowchart TD
 
 ## 4 · Where Is the Code and Evidence?
 
-**Status: 🚧 implementation in progress.** This portfolio is deliberately **spec-first** — the same discipline that reduced engineering rework 60% in my production work. What exists today, publicly reviewable:
+**Status: ✅ Live production-ready code.** The complete implementation is publicly reviewable:
 
-- This business case and the full [technical specification](#3--what-is-the-methodology) summarized above — functional requirements, NFRs, data model, testing strategy, and acceptance criteria.
-- The code repository (dbt project, seeds, snapshots, tests, CI, docs site) will be linked here on release, with its history telling a **diagnostics narrative**: the PoC starts from a flawed baseline (the state most real inherited codebases are in) and documents **seven concrete fixes** — missing staging layers, hardcoded unions, inconsistent fallback logic, full-refresh facts, missing SCD2 history, integrity violations, and the late-arriving-facts anomaly. Each fix is a commit a reviewer can read.
+- **Code Repository:** [github.com/dchavezf/marts_order_cycle](https://github.com/dchavezf/marts_order_cycle)
+- This repo contains the full dbt project, seeds for MDM customer cross-referencing, standard and custom data quality tests, incremental and merge materialization strategies, and SCD Type 2 history snapshots.
 
-**Definition of done** (verifiable, not vibes): `dbt build` green with zero test failures on synthetic data covering colliding IDs, unmapped customers, late-arriving orders, a Tax ID change and a backorder update; adding region 3 touches **only** staging/config/seed files; incremental runs demonstrably process deltas only; dbt docs site live with 100% Gold coverage.
+**Definition of done** (verifiable, not vibes): `dbt build` runs green with zero test failures; incremental runs process deltas only; data lineage and documentation are auto-generated.
 
 ---
 
