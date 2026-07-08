@@ -26,7 +26,7 @@ This directory contains the architectural decision records for the MeridianTrade
 
 ## Format
 
-All ADRs follow the [MADR](https://adr.github.io/madr/) template. See [template.md](template.md) for the structure.
+All ADRs follow the [MADR](https://adr.github.io/madr/) template. Use `docs/adr/template.md` as the source structure when drafting a new ADR.
 
 ## Why ADRs?
 

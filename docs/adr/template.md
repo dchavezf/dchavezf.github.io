@@ -1,15 +1,9 @@
----
-layout: page
-title: "ADR-NNN: Short Decision Title"
-permalink: /docs/adr/ADR-NNN-kebab-case-title/
----
-
 # ADR-NNN: Short Decision Title
 
 > **Status:** Proposed
 > **Date:** YYYY-MM-DD
 > **Decision Makers:** Daniel Chavez Flores
-> **Project:** [Project N - Project Name](/projects/project-slug/)
+> **Project:** Project N - Project Name
 
 
 ### **The Boardroom Hook**
@@ -54,6 +48,6 @@ Optional final question: **What decision does this force leadership to make next
 
 ## References
 
-- [Related project methodology](/projects/project-slug/#3--what-is-the-methodology)
-- [ADR-NNN](/docs/adr/ADR-NNN-related-decision/) - Related decision
+- Related project methodology
+- Related ADR
 - External documentation or source material
