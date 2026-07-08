@@ -1,0 +1,25 @@
+title: Daniel Chávez Flores — Data Platform Portfolio
+description: >-
+  Enterprise Data Architect & AI Platform Engineer. Working evidence of
+  Fortune 500-scale data migration, modern ELT design, and applied GenAI
+  on governed data — business case first, spec second, code third.
+author: Daniel Chávez Flores
+email: dchavezf@gmail.com
+url: "https://dchavezf.github.io"
+
+theme: minima
+
+header_pages:
+  - index.md
+  - projects/dbt-o2c-mdm.md
+  - projects/airflow-iac-pipeline.md
+  - projects/genai-rag-warehouse.md
+
+minima:
+  social_links:
+    - { platform: linkedin, user_url: "https://mx.linkedin.com/in/dchavezf" }
+    - { platform: github, user_url: "https://github.com/dchavezf" }
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
