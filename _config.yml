@@ -86,13 +86,15 @@ compress_html:
 exclude:
   - "*.gem"
   - "*.gemspec"
-  - docs
   - tools
   - README.md
   - LICENSE
   - purgecss.js
   - "*.config.js"
   - "package*.json"
+  - docs/superpowers
+  - docs/plan
+  - brand-image
 
 jekyll-archives:
   enabled: [categories, tags]
