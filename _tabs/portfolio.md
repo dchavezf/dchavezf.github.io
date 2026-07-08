@@ -3,12 +3,14 @@ layout: page
 title: Portfolio
 icon: fas fa-briefcase
 order: 1
+mermaid: true
 ---
 
 **Enterprise Data Architect & AI Platform Engineer**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dchavezf-0A66C2?logo=linkedin)](https://mx.linkedin.com/in/dchavezf)
 [![Email](https://img.shields.io/badge/Email-dchavezf%40gmail.com-EA4335?logo=gmail&logoColor=white)](mailto:dchavezf@gmail.com)
+[![Resume](https://img.shields.io/badge/Resume-read%20online-111827)](/resume/)
 
 San Luis Potosi, Mexico · Remote (Americas) · Open to Senior/Staff/Principal IC roles and B2B contract engagements
 
@@ -20,6 +22,7 @@ Anyone can claim skills on a resume. This portfolio is the **working evidence**:
 
 - [Why Talk to Me — the 30-Second Version](#why-talk-to-me--the-30-second-version)
 - [The Portfolio: One Platform, Three Disciplines](#the-portfolio-one-platform-three-disciplines)
+- [The Business Case](#the-business-case)
 - [What Each Project Proves](#what-each-project-proves)
 - [How to Review This Portfolio](#how-to-review-this-portfolio)
 - [Hiring Signals at a Glance](#hiring-signals-at-a-glance)
@@ -50,22 +53,34 @@ All three projects operate on the same fictional company — **MeridianTrade Gro
 ```mermaid
 flowchart LR
     subgraph P2["Project 2 — Ingestion & Infra"]
-        ERP["20 Regional ERPs<br/>(SQL Server)"] --> AF["Airflow EL Pipelines"]
-        AF --> LAKE["Cloud Data Lake<br/>(S3 / GCS)"]
-        LAKE --> DW[("Data Warehouse<br/>Snowflake / BigQuery")]
-        TF["Terraform IaC"] -.provisions.-> AF & LAKE & DW
+        ERP["20 regional ERP systems"] --> AF["Airflow ingestion pipelines"]
+        AF --> LAKE["Cloud data lake"]
+        LAKE --> DW["Snowflake or BigQuery warehouse"]
+        TF["Terraform infrastructure as code"] -. provisions .-> AF
+        TF -. provisions .-> LAKE
+        TF -. provisions .-> DW
     end
     subgraph P1["Project 1 — Transformation & Modeling"]
-        DW --> DBT["dbt Core<br/>Medallion + Kimball + MDM"]
-        DBT --> GOLD["Gold Marts<br/>(O2C Single Source of Truth)"]
+        DW --> DBT["dbt Medallion, Kimball, and MDM"]
+        DBT --> GOLD["Governed O2C Gold marts"]
     end
     subgraph P3["Project 3 — GenAI on Data"]
-        DBT -. "manifest / docs / lineage" .-> RAG["Warehouse Copilot<br/>(RAG + governed text-to-SQL)"]
+        DBT -. dbt artifacts and lineage .-> RAG["Warehouse Copilot"]
         GOLD --> RAG
     end
 ```
 
 One data universe, three architectural disciplines. A hiring manager can trace a single order record from ERP extraction to a natural-language answer.
+
+---
+
+## The Business Case
+
+The shared reference case is now documented as a standalone executive artifact:
+
+[Business Case: MeridianTrade Platform Transformation](/projects/transformation-business-case/)
+
+It combines the portfolio narrative with the full transformation case: 20 regional ERPs, 10TB+ of data, conflicting revenue definitions, legacy SQL Server/SSIS constraints, institutional knowledge risk, governed migration, and the decision controls that connect the three projects.
 
 ---
 
@@ -122,6 +137,11 @@ Every significant technical choice in this portfolio is documented as a formal A
 | [ADR-004](/docs/adr/ADR-004-config-driven-dag-factory/) | Config-driven DAG factory over hand-written DAGs | Project 2 |
 | [ADR-005](/docs/adr/ADR-005-gold-whitelist-sql-guard/) | Gold whitelist SQL guard over open generation | Project 3 |
 | [ADR-006](/docs/adr/ADR-006-deterministic-lineage-over-llm-generation/) | Deterministic lineage traversal over LLM generation | Project 3 |
+| [ADR-007](/docs/adr/ADR-007-semantic-layer-ratification/) | Semantic layer ratification before migration | Project 1 |
+| [ADR-008](/docs/adr/ADR-008-decoupled-compute-storage-platform/) | Decoupled compute and storage platform | Project 1 |
+| [ADR-009](/docs/adr/ADR-009-version-controlled-data-factory/) | Version-controlled data factory | Project 2 |
+| [ADR-010](/docs/adr/ADR-010-institutional-knowledge-as-governed-code/) | Institutional knowledge as governed code | Project 2 |
+| [ADR-011](/docs/adr/ADR-011-irreversible-strangler-cutover/) | Irreversible strangler cutover | Project 1 |
 
 ---
 
@@ -129,6 +149,7 @@ Every significant technical choice in this portfolio is documented as a formal A
 
 The fastest way to reach me:
 
+- **Resume:** [Read the resume](/resume/)
 - **LinkedIn:** [mx.linkedin.com/in/dchavezf](https://mx.linkedin.com/in/dchavezf)
 - **Email:** [dchavezf@gmail.com](mailto:dchavezf@gmail.com)
 - **GitHub:** [github.com/dchavezf](https://github.com/dchavezf)

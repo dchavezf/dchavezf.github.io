@@ -7,6 +7,7 @@ description: >-
   across 20 regional ERPs.
 categories: [Portfolio, Architecture]
 tags: [dbt, snowflake, bigquery, kimball, medallion, mdm, sql, jinja]
+mermaid: true
 ---
 
 # Enterprise Order-to-Cash & MDM Resolution Platform
@@ -14,6 +15,8 @@ tags: [dbt, snowflake, bigquery, kimball, medallion, mdm, sql, jinja]
 > **Portfolio project 1 of 3** · [← Portfolio home](/portfolio/) · Next: [Ingestion Platform with IaC →](/projects/airflow-iac-pipeline/)
 >
 > **Stack:** dbt Core · Snowflake / BigQuery · SQL · Jinja macros
+> **Business case:** [MeridianTrade Platform Transformation](/projects/transformation-business-case/)
+>
 > **Code repository:** [github.com/dchavezf/marts_order_cycle](https://github.com/dchavezf/marts_order_cycle)
 
 ## Contents
@@ -34,6 +37,8 @@ tags: [dbt, snowflake, bigquery, kimball, medallion, mdm, sql, jinja]
 MeridianTrade Group, a fictional multinational consumer-goods distributor, runs **20 regional ERP systems** that were never designed to talk to each other. Customer IDs collide across countries, data models diverge, and the executive team cannot answer a basic question — *"what is our real Order-to-Cash cycle time, globally?"* — without weeks of manual reconciliation.
 
 This project is the **transformation engine** that fixes that: a dbt Core project implementing a Medallion architecture (Bronze/Silver/Gold) with Kimball dimensional modeling and a governed Master Data Management (MDM) layer, delivering a unified, tested, cost-optimized Single Source of Truth for 500+ business users.
+
+Within the [MeridianTrade business case](/projects/transformation-business-case/), this project implements the governed transformation, MDM, Gold-layer consumption, and finance-facing trust layer required after ingestion is under control.
 
 ---
 

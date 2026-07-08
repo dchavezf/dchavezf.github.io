@@ -7,6 +7,7 @@ description: >-
   into a governed data lake and warehouse.
 categories: [Portfolio, DataOps]
 tags: [airflow, terraform, python, s3, gcs, github-actions, data-contracts]
+mermaid: true
 ---
 
 # Multi-Source Ingestion Platform with Infrastructure-as-Code
@@ -14,6 +15,8 @@ tags: [airflow, terraform, python, s3, gcs, github-actions, data-contracts]
 > **Portfolio project 2 of 3** · [← Portfolio home](/portfolio/) · Previous: [dbt O2C & MDM](/projects/dbt-o2c-mdm/) · Next: [Warehouse Copilot →](/projects/genai-rag-warehouse/)
 >
 > **Stack:** Apache Airflow · Terraform · Python · S3/GCS · Snowflake/BigQuery · GitHub Actions
+> **Business case:** [MeridianTrade Platform Transformation](/projects/transformation-business-case/)
+>
 > **Code repository:** 🚧 *implementation in progress — spec-first, the design below is the contract the code will be verified against*
 
 ## Contents
@@ -34,6 +37,8 @@ tags: [airflow, terraform, python, s3, gcs, github-actions, data-contracts]
 [Project 1](/projects/dbt-o2c-mdm/) assumed raw ERP data "arrives" in the warehouse. In real enterprises, that assumption is where projects die: extraction is a pile of undocumented scripts on someone's VM, environments are hand-built and drift apart, and the first sign of a broken feed is an executive asking why yesterday's numbers are missing.
 
 This project builds the **ingestion and infrastructure layer** for MeridianTrade Group: Airflow-orchestrated, idempotent EL pipelines that replicate 20 regional SQL Server ERPs into a cloud data lake and load them into the warehouse — with **every piece of infrastructure defined in Terraform**, promoted through identical dev/staging/prod environments by CI/CD.
+
+Within the [MeridianTrade business case](/projects/transformation-business-case/), this project implements the ingestion foundation, infrastructure-as-code controls, and data-contract boundary that make downstream governance credible.
 
 ---
 
@@ -159,3 +164,4 @@ Modeled on the production platform this reproduces (a GCP/BigQuery estate where 
 - 🐙 **GitHub:** [github.com/dchavezf](https://github.com/dchavezf)
 
 *Next in the platform: [Project 3 — Warehouse Copilot: GenAI over Governed Data →](/projects/genai-rag-warehouse/)*
+

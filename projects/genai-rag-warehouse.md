@@ -7,6 +7,7 @@ description: >-
   and enterprise-grade safety guardrails.
 categories: [Portfolio, GenAI]
 tags: [python, claude-api, rag, vector-search, fastapi, dbt, llm]
+mermaid: true
 ---
 
 # Warehouse Copilot — GenAI over Governed Data
@@ -14,6 +15,8 @@ tags: [python, claude-api, rag, vector-search, fastapi, dbt, llm]
 > **Portfolio project 3 of 3** · [← Portfolio home](/portfolio/) · Previous: [Ingestion Platform with IaC](/projects/airflow-iac-pipeline/)
 >
 > **Stack:** Python · Claude API · dbt artifacts (manifest/catalog) · vector search · FastAPI
+> **Business case:** [MeridianTrade Platform Transformation](/projects/transformation-business-case/)
+>
 > **Code repository:** 🚧 *implementation in progress — spec-first, the design below is the contract the code will be verified against*
 
 ## Contents
@@ -34,6 +37,8 @@ tags: [python, claude-api, rag, vector-search, fastapi, dbt, llm]
 MeridianTrade now has a governed warehouse ([Project 1](/projects/dbt-o2c-mdm/)) fed by reliable pipelines ([Project 2](/projects/airflow-iac-pipeline/)). A new problem emerges — the one every mature data platform hits: **500+ business users can't find, understand, or trust the data without asking an engineer.** "Which table has customer credit exposure?" "Does `days_order_to_cash` include weekends?" Each question interrupts the data team; each unanswered one breeds shadow spreadsheets.
 
 Warehouse Copilot is a **RAG assistant grounded in the platform's own governance artifacts** — dbt's manifest, catalog, lineage graph, and column documentation — plus a **governed text-to-SQL** mode that answers business questions by querying only approved Gold-layer models, showing its SQL, and refusing what it cannot verify.
+
+Within the [MeridianTrade business case](/projects/transformation-business-case/), this project implements the governed discovery layer: AI access that reduces support burden without allowing the model to invent lineage, definitions, or unsafe SQL.
 
 ---
 
@@ -152,3 +157,4 @@ Modeled on the GenAI platform work this reproduces (LLM + RAG pipelines that sav
 - 🐙 **GitHub:** [github.com/dchavezf](https://github.com/dchavezf)
 
 *Back to the map: [Portfolio home](/portfolio/)*
+

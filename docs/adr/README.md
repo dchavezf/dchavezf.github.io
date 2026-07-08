@@ -18,6 +18,11 @@ This directory contains the architectural decision records for the MeridianTrade
 | [ADR-004](/docs/adr/ADR-004-config-driven-dag-factory/) | Config-driven DAG factory over hand-written DAGs | Accepted | Project 2 |
 | [ADR-005](/docs/adr/ADR-005-gold-whitelist-sql-guard/) | Gold whitelist SQL guard over open SQL generation | Accepted | Project 3 |
 | [ADR-006](/docs/adr/ADR-006-deterministic-lineage-over-llm-generation/) | Deterministic lineage traversal over LLM generation | Accepted | Project 3 |
+| [ADR-007](/docs/adr/ADR-007-semantic-layer-ratification/) | Semantic layer ratification before migration | Accepted | Project 1 |
+| [ADR-008](/docs/adr/ADR-008-decoupled-compute-storage-platform/) | Decoupled compute and storage platform | Accepted | Project 1 |
+| [ADR-009](/docs/adr/ADR-009-version-controlled-data-factory/) | Version-controlled data factory | Accepted | Project 2 |
+| [ADR-010](/docs/adr/ADR-010-institutional-knowledge-as-governed-code/) | Institutional knowledge as governed code | Accepted | Project 2 |
+| [ADR-011](/docs/adr/ADR-011-irreversible-strangler-cutover/) | Irreversible strangler cutover | Accepted | Project 1 |
 
 ## Format
 

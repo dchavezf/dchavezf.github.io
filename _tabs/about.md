@@ -7,6 +7,8 @@ order: 3
 
 ### From Regional Leader to the Indifference of the Algorithm
 
+![Daniel Chavez Flores](/resume/profile_image.jpg){: width="180" .right}
+
 For nearly my entire career, I was an unbearable technical snob.
 
 I was convinced that if my architecture was flawless and my queries flew, the market owed me success by sheer right. I despised HR, hated networking, and blindly believed that elegant code was the final product.
@@ -53,6 +55,7 @@ You are the product, not your code. The question isn't how much the data stored 
 >
 > If you are looking for a Senior Data Engineer and Solutions Architect who treats data infrastructure as a high-performance product—eliminating regional data chaos, enforcing rigid observability, and translating architectural decisions directly into business ROI—let's get in touch.
 >
+> *   **Resume:** [Read the resume](/resume/)
 > *   **LinkedIn:** [linkedin.com/in/dchavezf](https://mx.linkedin.com/in/dchavezf)
 > *   **Email:** [dchavezf@gmail.com](mailto:dchavezf@gmail.com)
 > *   **Location & Timezone:** San Luis Potosí, Mexico · Central Standard Time (CST / UTC-6, Fixed)
