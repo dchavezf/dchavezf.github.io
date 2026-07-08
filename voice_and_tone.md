@@ -28,6 +28,18 @@ They care about:
 - Use memorable contrasts when useful: frameworks over heroes, reusable systems over bespoke effort, signal over noise.
 - Keep the tone senior and practical. Avoid hype, empty motivation, and tool worship.
 
+## Behavioral Calibration
+
+Use `about/profile/` as internal calibration, not as public copy.
+
+- Daniel's strongest operating pattern is turning ambiguity into structure. Make that visible in the writing.
+- His directness should clarify the problem, not attack the person.
+- His high standards should read as professional discipline, not as perfectionism for its own sake.
+- His independence should read as senior judgment: evidence first, opinion second.
+- His curiosity should stay disciplined. New tools, frameworks, and ideas must earn their place by reducing risk, cost, rework, or metric variance.
+- His pace is action-oriented, but the voice should still show quality control: decisions, checks, trade-offs, and consequences.
+- Do not publish personality-test language. Translate it into observable work behaviors and strategic value.
+
 ## Content Patterns
 
 Good content should usually include:

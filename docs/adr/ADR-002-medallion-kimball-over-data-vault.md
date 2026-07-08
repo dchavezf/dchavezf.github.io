@@ -33,7 +33,7 @@ Adopt a **Medallion architecture (Bronze/Silver/Gold) with Kimball dimensional m
 ### Negative
 
 - **Less flexible under extreme schema churn**: If source systems change schemas weekly, DV2's hash-key-based structure would absorb changes more gracefully. Mitigated because MeridianTrade's ERPs are stable SQL Server schemas.
-- **MDM responsibility shifts to a governed seed**: Without DV2's hub-link structure for entity resolution, identity management is handled by a separate MDM cross-reference (see [ADR-003](ADR-003-mdm-as-governed-seed.md)).
+- **MDM responsibility shifts to a governed seed**: Without DV2's hub-link structure for entity resolution, identity management is handled by a separate MDM cross-reference (see [ADR-003](/docs/adr/ADR-003-mdm-as-governed-seed/)).
 
 ### Neutral
 

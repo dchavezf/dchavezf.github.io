@@ -14,6 +14,16 @@ Este documento contiene el contexto estrategico del proyecto. Usa esta informaci
 
 PROPUESTA DE VALOR Y POSICIONAMIENTO
 
+Nota de calibración desde `about/profile/`: el posicionamiento debe mostrar que Daniel no solo construye plataformas de datos; convierte ambigüedad ejecutiva en sistemas claros, auditables y repetibles. Su perfil combina orientación a resultados, alta autoexigencia, independencia analítica, comunicación directa y curiosidad disciplinada. Esto debe reforzar la tesis del "Data Engineer 2.0": un arquitecto que no opera desde el heroísmo técnico, sino desde la reducción de incertidumbre, la claridad de procesos y la construcción de frameworks reutilizables.
+
+Aplicación editorial:
+
+- Presentar la baja tolerancia a la ambigüedad como una ventaja profesional: Daniel detecta Definition Gaps antes de que se conviertan en conflictos de steering committee.
+- Presentar la autoexigencia como estándar de entrega, no como perfeccionismo estéril.
+- Presentar la independencia como criterio arquitectónico: piensa con evidencia antes de opinar y no necesita micro-management.
+- Presentar la comunicación directa como disciplina de delivery: nombra riesgos, trade-offs y dependencias sin decorar el problema.
+- Presentar la curiosidad como exploración con método: nuevas herramientas solo entran cuando reducen riesgo, costo o incertidumbre.
+
 Seed de Pensamiento: DataEngineer
 
 Partners, Practice Directors, and Technical VPs at a Global IT Consulting Firm
@@ -2564,4 +2574,3 @@ Objeción 6: "The Data Engineer 2.0 profile you describe — doesn't it create a
 Son raros en los pipelines de reclutamiento tradicionales. Porque los pipelines tradicionales buscan keywords: "Snowflake, 7 años, dbt, Airflow." El perfil híbrido no se esconde en LinkedIn Jobs. Se esconde en comunidades donde discuten arquitectura, consultoría y negocios simultáneamente. El OS no solo te ayuda a evaluarlos — te enseña dónde encontrarlos y cómo atraerlos. Y aquí está la parte que cambia el juego: muchos de ellos están en mercados emergentes (LATAM, India, Europa del Este), con 15+ años de experiencia, inglés de negocios, y un billing rate que es 40-60% del mercado US/UK. No son unicornios. Son talento mal leído por un mercado que solo sabe buscar herramientas.
 
 Documento generado aplicando el framework Expert Secrets de Russell Brunson. Basado en el seed del proyecto DataEngineer, las tres buyer personas (Marcus Chen, Priya Nair, David Okonkwo), y la biografía de Daniel Chávez Flores como Atractivo Caracter.
-

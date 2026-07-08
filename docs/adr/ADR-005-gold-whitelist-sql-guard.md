@@ -51,4 +51,4 @@ Adopt a **multi-layered SQL safety architecture**:
 
 - [sqlglot — SQL parser and transpiler](https://github.com/tobymao/sqlglot)
 - [Project 3 — Methodology](/projects/genai-rag-warehouse/#3--what-is-the-methodology)
-- [ADR-006](ADR-006-deterministic-lineage-over-llm-generation.md) — Related decision on lineage handling
+- [ADR-006](/docs/adr/ADR-006-deterministic-lineage-over-llm-generation/) — Related decision on lineage handling

@@ -45,4 +45,4 @@ Adopt **deterministic graph traversal** for all lineage questions. The manifest 
 
 - [dbt manifest.json schema](https://docs.getdbt.com/reference/artifacts/manifest-json)
 - [Project 3 — Methodology](/projects/genai-rag-warehouse/#3--what-is-the-methodology)
-- [ADR-005](ADR-005-gold-whitelist-sql-guard.md) — Related decision on SQL safety
+- [ADR-005](/docs/adr/ADR-005-gold-whitelist-sql-guard/) — Related decision on SQL safety
