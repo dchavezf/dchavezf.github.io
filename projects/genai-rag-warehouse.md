@@ -2,6 +2,10 @@
 layout: page
 title: "Project 3 · GenAI Warehouse Copilot"
 permalink: /projects/genai-rag-warehouse.html
+description: >-
+  RAG-powered warehouse assistant grounded in dbt governance artifacts with
+  governed text-to-SQL, deterministic lineage, LLM evaluation suites,
+  and enterprise-grade safety guardrails.
 ---
 
 # Warehouse Copilot — GenAI over Governed Data

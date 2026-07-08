@@ -2,6 +2,10 @@
 layout: page
 title: "Project 2 · Airflow + Terraform"
 permalink: /projects/airflow-iac-pipeline.html
+description: >-
+  Config-driven multi-source ingestion platform with Airflow orchestration,
+  Terraform IaC, data contracts, and CI/CD — extracting from 20 regional ERPs
+  into a governed data lake and warehouse.
 ---
 
 # Multi-Source Ingestion Platform with Infrastructure-as-Code

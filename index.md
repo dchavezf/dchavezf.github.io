@@ -1,5 +1,8 @@
 ---
 layout: home
+description: >-
+  Enterprise Data Architect & AI Platform Engineer portfolio. Three interconnected
+  enterprise-grade data platform projects — business case first, spec second, code third.
 ---
 
 # Daniel Chávez Flores
@@ -22,6 +25,7 @@ Anyone can claim skills on a resume. This portfolio is the **working evidence**:
 - [What Each Project Proves](#what-each-project-proves)
 - [How to Review This Portfolio](#how-to-review-this-portfolio)
 - [Hiring Signals at a Glance](#hiring-signals-at-a-glance)
+- [Architecture Decision Records](#architecture-decision-records)
 - [Contact](#contact)
 
 ---
@@ -91,10 +95,35 @@ Every project page explicitly answers the five questions a reviewer needs: **the
 ## Hiring Signals at a Glance
 
 - **Experience:** 22 years in data; current title Senior Data Solutions Architect & AI Platform Engineer (Infovision); previously TCS and independent B2B consulting.
-- **Core stack:** Snowflake · GCP/BigQuery · dbt · Airflow · Python · SQL · Data Vault 2.0 / Kimball · Data Governance · FinOps · RAG/GenAI.
 - **Certifications:** GitHub Copilot, GitHub Foundations (2025) — AI-native engineering workflow in daily practice.
 - **Working style:** spec-first (reduced engineering rework 60% by establishing a Spec-First culture — this portfolio practices it), C-suite-fluent, radical transparency on trade-offs.
 - **Availability:** remote-first, Americas time zones; open to full-time senior IC roles or contractor-based B2B partnerships.
+
+### Strategic Stack by Capability
+
+| Capability | Tools & Expertise |
+|------------|-------------------|
+| **Data Modeling & Governance** | Snowflake · BigQuery · dbt Core · Kimball / Data Vault 2.0 · MDM · Data Contracts · FinOps |
+| **Orchestration & Infrastructure** | Apache Airflow · Terraform · Docker · GitHub Actions · CI/CD |
+| **AI-Augmented Development** | Claude API · GitHub Copilot · RAG pipelines · LLM evaluation & guardrails |
+| **Languages & Query** | SQL · Python · Jinja · Bash |
+| **Cloud Platforms** | GCP (BigQuery, GCS, Cloud Composer) · AWS (S3, Redshift) · Snowflake |
+| **Data Quality & Observability** | dbt tests · Great Expectations · SLA monitoring · alerting |
+
+---
+
+## Architecture Decision Records
+
+Every significant technical choice in this portfolio is documented as a formal ADR in [`/docs/adr/`](docs/adr/). These records explain the *why* behind each decision — the trade-offs, the alternatives considered, and the consequences accepted:
+
+| ADR | Decision | Project |
+|-----|----------|---------|
+| [ADR-001](docs/adr/ADR-001-elt-over-etl.md) | ELT (transform in-warehouse) over ETL | Project 1 |
+| [ADR-002](docs/adr/ADR-002-medallion-kimball-over-data-vault.md) | Medallion + Kimball over Data Vault 2.0 | Project 1 |
+| [ADR-003](docs/adr/ADR-003-mdm-as-governed-seed.md) | Governed seed MDM over probabilistic entity resolution | Project 1 |
+| [ADR-004](docs/adr/ADR-004-config-driven-dag-factory.md) | Config-driven DAG factory over hand-written DAGs | Project 2 |
+| [ADR-005](docs/adr/ADR-005-gold-whitelist-sql-guard.md) | Gold whitelist SQL guard over open generation | Project 3 |
+| [ADR-006](docs/adr/ADR-006-deterministic-lineage-over-llm-generation.md) | Deterministic lineage traversal over LLM generation | Project 3 |
 
 ---
 

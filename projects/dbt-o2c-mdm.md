@@ -2,6 +2,10 @@
 layout: page
 title: "Project 1 · dbt O2C & MDM"
 permalink: /projects/dbt-o2c-mdm.html
+description: >-
+  Enterprise Order-to-Cash transformation and Master Data Management resolution
+  platform using dbt Core, Medallion architecture, and Kimball dimensional modeling
+  across 20 regional ERPs.
 ---
 
 # Enterprise Order-to-Cash & MDM Resolution Platform

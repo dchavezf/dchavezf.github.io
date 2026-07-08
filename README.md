@@ -14,6 +14,26 @@ This portfolio demonstrates, in reviewable documents and code, three architectur
 
 Each project page answers five questions explicitly: the business problem, the tools, the methodology, where the code lives, and the quantified outcome.
 
+## Architecture Decision Records
+
+Every significant technical choice is documented as a formal ADR in [`/docs/adr/`](docs/adr/). These records show *why* each decision was made, what alternatives were considered, and what trade-offs were accepted.
+
+## Repository Structure
+
+```
+├── index.md                    # Landing page (portfolio home)
+├── projects/                   # Project detail pages
+│   ├── dbt-o2c-mdm.md          # Project 1: Transformation & Modeling
+│   ├── airflow-iac-pipeline.md # Project 2: Ingestion & Infrastructure
+│   └── genai-rag-warehouse.md  # Project 3: GenAI Warehouse Copilot
+├── docs/adr/                   # Architecture Decision Records
+├── _posts/                     # Blog: thought leadership articles
+├── _includes/head.html         # Custom head (Mermaid.js integration)
+├── assets/css/style.scss       # Custom theme overrides
+├── .github/workflows/          # CI/CD (Jekyll build & deploy)
+└── _config.yml                 # Jekyll configuration
+```
+
 ## Contact
 
 - LinkedIn: [mx.linkedin.com/in/dchavezf](https://mx.linkedin.com/in/dchavezf)

@@ -1,0 +1,46 @@
+---
+permalink: /404.html
+layout: default
+---
+
+<style>
+  .error-page {
+    text-align: center;
+    padding: 4rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .error-page h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .error-page p {
+    font-size: 1.15rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+  .error-page a {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .error-page a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+</style>
+
+<div class="error-page">
+  <h1>404</h1>
+  <p>This page doesn't exist — but the data platform does.</p>
+  <a href="{{ '/' | relative_url }}">← Back to Portfolio</a>
+</div>
