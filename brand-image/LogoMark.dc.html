@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg viewBox="0 0 64 64" width="{{ size }}" height="{{ size }}" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; overflow:visible">
+  <g stroke="{{ structureColor }}" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="6" y1="17" x2="17" y2="17"></line>
+    <line x1="10" y1="26" x2="20" y2="26"></line>
+    <line x1="6" y1="35" x2="15" y2="35"></line>
+    <line x1="11" y1="45" x2="20" y2="45"></line>
+    <path d="M24 12 L40 29 L40 35 L24 52"></path>
+  </g>
+  <line x1="40" y1="32" x2="55" y2="32" stroke="{{ signalColor }}" stroke-width="3.2" stroke-linecap="round"></line>
+  <circle cx="56.6" cy="32" r="3.4" fill="{{ signalColor }}"></circle>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:120,&quot;height&quot;:120},&quot;structureColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#16213e&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;signalColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#0f9b8e&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:64,&quot;tsType&quot;:&quot;number&quot;}}"></script>
+</body>
+</html>

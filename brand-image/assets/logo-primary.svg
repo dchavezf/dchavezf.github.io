@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="540" height="120">
+  <g transform="translate(6,28)">
+    <g fill="none" stroke="#16213e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" y1="17" x2="17" y2="17"></line>
+      <line x1="10" y1="26" x2="20" y2="26"></line>
+      <line x1="6" y1="35" x2="15" y2="35"></line>
+      <line x1="11" y1="45" x2="20" y2="45"></line>
+      <path d="M24 12 L40 29 L40 35 L24 52"></path>
+    </g>
+    <line x1="40" y1="32" x2="55" y2="32" stroke="#0f9b8e" stroke-width="3.2" stroke-linecap="round"></line>
+    <circle cx="56.6" cy="32" r="3.4" fill="#0f9b8e"></circle>
+  </g>
+  <text x="92" y="76" font-family="&#39;Space Grotesk&#39;, sans-serif" font-size="50" font-weight="600" letter-spacing="-1" fill="#16213e">DanielChavez<tspan fill="#0f9b8e" font-weight="500">.mx</tspan></text>
+</svg>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}body{margin:0}</style>
+</helmet>
+<div style="width:1584px; height:396px; background:#16213e; position:relative; overflow:hidden; font-family:'Space Grotesk',sans-serif">
+
+  <!-- faint pipeline grid -->
+  <div style="position:absolute; inset:0; background-image:linear-gradient(#ffffff0a 1px, transparent 1px); background-size:100% 44px; opacity:0.5"></div>
+
+  <!-- oversized watermark mark bleeding off right -->
+  <svg viewBox="0 0 64 64" width="640" height="640" style="position:absolute; right:-120px; top:50%; transform:translateY(-50%); opacity:0.06">
+    <g fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" y1="17" x2="17" y2="17"></line>
+      <line x1="10" y1="26" x2="20" y2="26"></line>
+      <line x1="6" y1="35" x2="15" y2="35"></line>
+      <line x1="11" y1="45" x2="20" y2="45"></line>
+      <path d="M24 12 L40 29 L40 35 L24 52"></path>
+    </g>
+    <line x1="40" y1="32" x2="55" y2="32" stroke="#2fd4c0" stroke-width="2.4" stroke-linecap="round"></line>
+    <circle cx="56.6" cy="32" r="3.4" fill="#2fd4c0"></circle>
+  </svg>
+
+  <!-- content block, centered vertically, kept clear of the avatar (lower-left) -->
+  <div style="position:absolute; left:300px; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:32px">
+    <div style="flex:none">
+      <dc-import name="LogoMark" structure-color="#ffffff" signal-color="#2fd4c0" size="116" hint-size="116px,116px"></dc-import>
+    </div>
+    <div style="width:1px; height:120px; background:#ffffff22"></div>
+    <div style="display:flex; flex-direction:column; gap:16px">
+      <div style="font-size:60px; font-weight:600; letter-spacing:-0.02em; line-height:1; color:#fff">DanielChavez<span style="color:#2fd4c0; font-weight:500">.mx</span></div>
+      <div style="font-size:24px; color:#aeb6c4; font-weight:400; letter-spacing:0.01em">Data &amp; Analytics Engineer — pipelines, platforms, automation</div>
+      <div style="display:flex; align-items:center; gap:16px; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:15px; color:#dfe3ea; letter-spacing:0.04em">
+        <span>dbt</span>
+        <span style="width:5px; height:5px; border-radius:50%; background:#2fd4c0"></span>
+        <span>Python</span>
+        <span style="width:5px; height:5px; border-radius:50%; background:#2fd4c0"></span>
+        <span>AWS / GCP</span>
+        <span style="width:5px; height:5px; border-radius:50%; background:#2fd4c0"></span>
+        <span>Modern Data Stack</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- corner tag -->
+  <div style="position:absolute; right:48px; bottom:34px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color:#5f6b82">MX · Global Clients · ES / EN</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1584,&quot;height&quot;:396}}"></script>
+</body>
+</html>
