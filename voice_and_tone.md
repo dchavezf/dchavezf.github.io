@@ -30,8 +30,6 @@ They care about:
 
 ## Behavioral Calibration
 
-Use `about/profile/` as internal calibration, not as public copy.
-
 - Daniel's strongest operating pattern is turning ambiguity into structure. Make that visible in the writing.
 - His directness should clarify the problem, not attack the person.
 - His high standards should read as professional discipline, not as perfectionism for its own sake.

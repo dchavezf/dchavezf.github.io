@@ -11,42 +11,36 @@ permalink: /docs/adr/ADR-005-gold-whitelist-sql-guard/
 > **Decision Makers:** Daniel Chávez Flores
 > **Project:** [Project 3 — Warehouse Copilot: GenAI over Governed Data](/projects/genai-rag-warehouse/)
 
-## Context
 
-Warehouse Copilot includes a text-to-SQL mode that generates SQL from natural-language business questions. In an enterprise context, unrestricted SQL generation by an LLM against a production warehouse poses severe risks: hallucinated table/column names, unintended writes (DML/DDL), access to raw/staging data bypassing governance, and uncontrolled scan costs.
+### **The Boardroom Hook**
+Connecting a Large Language Model (LLM) to your production data warehouse without rigid structural constraints is not "innovation"—it is **corporate suicide**. If your data governance is broken, GenAI is simply a machine for manufacturing **GIGO 2.0 (Garbage In, Garbage Out)** at a faster and significantly more expensive rate. We are not here to provide a magic wand that hallucinations can wave at our balance sheet; we are here to build a **governed interface** that converts natural language into audited financial insight without risking the firm’s liquidity or operational trust.
 
-Two approaches were evaluated:
+### **The Real Problem**
+The status quo of "Open SQL Generation" is a **fiduciary liability**. Generative AI hallucinations aren't just technical errors; they are potential **attack vectors**. A successful **prompt injection** that executes unauthorized DML (Data Manipulation Language) or DDL (Data Definition Language) commands could delete historical audit trails or exfiltrate raw PII (Personally Identifiable Information) from our Bronze layer. 
 
-- **Open SQL generation**: The LLM generates arbitrary SQL against the full warehouse schema. Simpler to implement but impossible to bound the blast radius.
-- **Gold whitelist with static SQL guard**: SQL generation is restricted to a pre-approved list of documented Gold-layer models. Generated SQL is statically parsed and validated before execution.
+Furthermore, an unconstrained LLM will eventually generate a "rogue query"—a massive table scan or a **Cartesian join**—that can burn through a monthly compute budget in a single afternoon. Without a physical "chokepoint," the blast radius of a single AI hallucination is the entire enterprise footprint.
 
-## Decision
+### **The ADR (The Decision)**
+We have officially **rejected open-ended SQL generation**. We are implementing a **Multi-Layer Security Guardrail** architecture for our Warehouse Copilot.
 
-Adopt a **multi-layered SQL safety architecture**:
+**The Decision Drivers:**
+*   **Gold-Layer Whitelisting:** The Copilot is surgically restricted to the **Gold Serving Layer (Kimball Star Schemas)**. It is physically prohibited from seeing or querying the Raw (Bronze) or Integration (Silver) layers.
+*   **Static SQL Guard (sqlglot):** We are deploying **static analysis** via `sqlglot`. Every generated query is parsed and validated before it hits the Snowflake compiler. If the parser detects anything other than a read-only **SELECT** statement, the execution is killed instantly.
+*   **Forced Constraints:** Every query is programmatically injected with a **mandatory LIMIT** and a **read-only session parameter**. We are moving from a policy of "asking nicely" to an infrastructure of **mathematical enforcement**.
+*   **Radical Transparency:** The "Black Box" is dead. The generated SQL is always visible to the analyst for verification before final execution.
 
-1. **Gold model whitelist**: Only documented Gold-layer models (from dbt's manifest) are available for query generation.
-2. **Static SQL guard** (via `sqlglot`): Validates that generated SQL is a single `SELECT` statement, references only whitelisted relations, contains no DML/DDL, and includes an enforced `LIMIT` clause.
-3. **Read-only database role**: The execution connection has read-only permissions at the database level.
-4. **Timeout and scan caps**: Query execution is bounded by time and bytes-scanned limits.
-5. **Always show the SQL**: Users see the generated query alongside results — no hidden computation.
+### **The Replicable Engine**
+We have engineered **certainty** into the AI-human loop:
 
-## Consequences
+1.  **Blast Radius Isolation:** By restricting access to the Gold layer, even a "perfect" prompt injection can only retrieve data the analyst was already authorized to see.
+2.  **Scan Caps and FinOps:** We use **Snowflake Resource Monitors** and hard-coded scan caps. If the LLM generates a query that exceeds our "Safe Scan" threshold, the system aborts the request before the bill accrues.
+3.  **Accepted False Refusals:** We explicitly accept **False Refusals** as a necessary trade-off. We would rather the Copilot say "I cannot perform that action" 5% of the time than allow a single destructive query to pass through.
+4.  **Audit-Ready Logging:** Every prompt, every hallucination attempt, and every successful query is logged with a **deterministic hash**, providing a forensic trail for the Audit Committee.
 
-### Positive
+### **The Closing**
+We have stopped treatinig AI as a toy and started treating it as a **regulated industrial actuator**. 
 
-- **Bounded blast radius by design**: Even a successful prompt injection can, at worst, produce a `SELECT` on Gold models already visible to the user. This is the critical insight: the *constraint* is what makes it deployable in an enterprise.
-- **Auditability builds trust**: Showing SQL to analysts satisfies governance requirements and builds organic adoption — they can verify the system's reasoning.
-- **Cost control**: LIMIT enforcement and scan caps prevent runaway queries from impacting the warehouse budget.
-
-### Negative
-
-- **Cannot answer questions requiring raw-layer data**: Questions about data freshness, ingestion anomalies, or staging-level debugging require direct warehouse access. Mitigated by the refusal mode, which explains the limitation and provides an escalation path.
-- **Whitelist maintenance**: The Gold whitelist must be regenerated when dbt models change. Mitigated by deriving it automatically from `manifest.json` post-`dbt build`.
-
-### Neutral
-
-- The static guard is conservative by design — it may reject valid but complex SQL (CTEs, window functions) if the sqlglot parser doesn't recognize the pattern. This is an acceptable trade-off: false refusals are safe; false acceptances are not.
-
+One final question for the Steering Committee: **Are you prepared to explain to the board why a "hallucinated" Cartesian join cost the firm $50,000 in compute credits, or are you ready to invest in the guardrails that make that failure physically impossible?**.
 ## References
 
 - [sqlglot — SQL parser and transpiler](https://github.com/tobymao/sqlglot)

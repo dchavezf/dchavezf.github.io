@@ -11,36 +11,33 @@ permalink: /docs/adr/ADR-004-config-driven-dag-factory/
 > **Decision Makers:** Daniel Chávez Flores
 > **Project:** [Project 2 — Multi-Source Ingestion Platform with IaC](/projects/airflow-iac-pipeline/)
 
-## Context
 
-MeridianTrade's ingestion platform must extract data from 20 regional ERP systems that share the same base schema but differ in connection details, schedules, SLAs, and entity subsets. The Airflow orchestration layer needs to handle all 20 sources.
+### **The Boardroom Hook**
+Every time we onboard a new regional ERP, we are currently performing "maintenance as a ritual" rather than engineering as a discipline. If a simple update to a retry policy requires a developer to manually touch 20 separate files, we have built a **structural liability**, not a scalable platform. At MeridianTrade Group, "manual labor" in orchestration is just a polite term for **unquantified operational risk**. We are not here to build 20 bespoke pipelines; we are here to build a single **Data Factory** that operates with mechanical consistency across 20 countries.
 
-Two approaches were evaluated:
+### **The Real Problem**
+The status quo of **hand-written DAGs** is a recipe for **configuration drift**. When each region has its own independent Python file, small discrepancies in schedules, SLAs, or connection logic inevitably creep in. This creates an environment where "Mexico works but Colombia doesn't," and nobody can explain why without an hour of forensic code comparison. This is the **"Hero Dependency"** trap: we rely on individual engineers to remember to apply a global fix across 20 islands of code. It is an unscalable model that turns onboarding into a multi-day sprint and makes global auditing a nightmare.
 
-- **One hand-written DAG per region**: Explicit, easy to understand individually, but results in 20 near-identical files with duplicated logic. Any behavioral change (retry policy, alerting callback) must be applied 20 times.
-- **A config-driven DAG factory**: Pipeline logic is written once; each region is defined in a YAML configuration file. Airflow generates per-region DAGs from config at parse time.
+### **The ADR (The Decision)**
+We have officially decided to move away from individual DAG files in favor of a **Config-driven DAG Factory Pattern**. 
 
-## Decision
+**The Decision Drivers:**
+*   **Rejecting Replication Toil:** We are automating the "toil" of pipeline creation. Pipeline logic—including our **Shift-Left Testing** gates and PagerDuty callbacks—is written once in a Python module and applied to all regions via YAML.
+*   **Separation of Philosophy and Mechanics:** We are separating the *what* (YAML configuration) from the *how* (Python factory logic). This allows us to treat infrastructure as plain static data.
+*   **Consistency by Construction:** By using a factory to generate common patterns, we ensure that every region follows the exact same architectural shape: `extract → validate_contract → load → freshness_check`. No exceptions, no drift.
 
-Adopt a **config-driven DAG factory pattern**. A single Python module reads region YAML configs and generates one Airflow DAG per region. Each config specifies: connection reference, entities to extract, schedule, SLA thresholds, and watermark columns.
+### **The Replicable Engine**
+We have transformed our ingestion layer into a **Parameter-Driven Engine**:
 
-## Consequences
+1.  **Onboarding Velocity:** Adding a new country is now a **YAML entry**, not a code commit. We have compressed the onboarding time from a full sprint to **under 60 minutes**. 
+2.  **Centralized Logic Maintenance:** A change to our global **SLA thresholds** or retry policies is applied in a single location and instantly inherited by all 20 regional DAGs during the Airflow parse cycle.
+3.  **Auditable Metadata:** Each region’s YAML config serves as a declarative "contract" specifying its connection reference, entities, and watermark columns. This is the **Single Source of Truth** for our ingestion footprint.
+4.  **Unit-Tested Governance:** The factory itself is protected by comprehensive unit tests, ensuring that the "engine" that builds our pipelines is functionally perfect before it ever generates a production DAG.
 
-### Positive
+### **The Closing**
+We have stopped writing code for every country and started building an **infrastructure of certainty**.
 
-- **Onboarding a new region is a YAML entry, not new code**: Reduces onboarding from a sprint to under one hour — critical for the 20-country mandate.
-- **Single point of logic maintenance**: Retry policies, alerting callbacks, data contract validation, and freshness checks are defined once and apply uniformly.
-- **Consistency by construction**: All regions follow the same pipeline shape (`extract → validate_contract → load → freshness_check`); no drift between regions.
-
-### Negative
-
-- **Debugging indirection**: When a DAG fails, an engineer must understand both the factory code and the YAML config to trace the issue. Mitigated by clear logging that references the config source.
-- **Factory complexity**: The DAG factory itself is more complex than any single hand-written DAG. Mitigated by comprehensive unit tests on the factory logic.
-
-### Neutral
-
-- Airflow's `DagBag` discovery model natively supports dynamically generated DAGs — no custom scheduler plugins needed.
-
+One final question for the platform team: **Are you satisfied funding a team of "ticket-takers" who manually copy-paste code for 20 regions, or are you ready to invest in an architecture that scales as fast as the business does?**
 ## References
 
 - [Astronomer: Dynamically Generating DAGs](https://www.astronomer.io/guides/dynamically-generating-dags/)
