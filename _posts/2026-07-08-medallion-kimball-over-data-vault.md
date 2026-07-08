@@ -66,7 +66,7 @@ Three-layer architecture (Bronze/Silver/Gold) where Gold marts use Kimball star 
 
 We chose **Medallion + Kimball** with three mitigations for the trade-offs:
 
-1. **MDM as a governed seed** ([ADR-003]({{ site.baseurl }}/docs/adr/ADR-003-mdm-as-governed-seed.md)): Identity resolution is handled by a steward-owned cross-reference, not by the modeling structure itself. This is explicit, auditable, and business-owned.
+1. **MDM as a governed seed** ([ADR-003](/docs/adr/ADR-003-mdm-as-governed-seed/)): Identity resolution is handled by a steward-owned cross-reference, not by the modeling structure itself. This is explicit, auditable, and business-owned.
 
 2. **SCD Type 2 via dbt snapshots**: Historical tracking of dimension changes (the feature Data Vault provides structurally) is achieved through dbt's snapshot mechanism. The result is functionally equivalent for this use case.
 
@@ -89,6 +89,6 @@ None of these applied to MeridianTrade's situation. The ERPs are stable, the tea
 
 ## The Takeaway
 
-The best modeling methodology is the one that matches your constraints: team skills, source volatility, consumption patterns, and timeline. The decision here wasn't "Kimball is better than Data Vault" — it was "Kimball is better *for this context*." The formal reasoning lives in [ADR-002]({{ site.baseurl }}/docs/adr/ADR-002-medallion-kimball-over-data-vault.md).
+The best modeling methodology is the one that matches your constraints: team skills, source volatility, consumption patterns, and timeline. The decision here wasn't "Kimball is better than Data Vault" — it was "Kimball is better *for this context*." The formal reasoning lives in [ADR-002](/docs/adr/ADR-002-medallion-kimball-over-data-vault/).
 
 Senior architecture is choosing what *not* to build. Data Vault 2.0 is excellent engineering — and it was the wrong choice here. Knowing the difference is the job.

@@ -1,3 +1,9 @@
+---
+layout: page
+title: "ADR-005: Gold Whitelist SQL Guard over Open SQL Generation"
+permalink: /docs/adr/ADR-005-gold-whitelist-sql-guard/
+---
+
 # ADR-005: Gold Whitelist SQL Guard over Open SQL Generation
 
 > **Status:** Accepted

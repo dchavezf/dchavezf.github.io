@@ -1,3 +1,9 @@
+---
+layout: page
+title: "ADR-004: Config-Driven DAG Factory over Hand-Written DAGs"
+permalink: /docs/adr/ADR-004-config-driven-dag-factory/
+---
+
 # ADR-004: Config-Driven DAG Factory over Hand-Written DAGs
 
 > **Status:** Accepted

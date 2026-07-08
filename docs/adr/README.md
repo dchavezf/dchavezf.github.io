@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Architecture Decision Records"
+permalink: /docs/adr/
+---
+
 # Architecture Decision Records (ADRs)
 
 This directory contains the architectural decision records for the MeridianTrade Group data platform portfolio. Each ADR documents a significant technical choice, the alternatives considered, and the trade-offs accepted.

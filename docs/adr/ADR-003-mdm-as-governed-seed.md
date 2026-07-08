@@ -1,3 +1,9 @@
+---
+layout: page
+title: "ADR-003: MDM as Governed Seed over Probabilistic Entity Resolution"
+permalink: /docs/adr/ADR-003-mdm-as-governed-seed/
+---
+
 # ADR-003: MDM as Governed Seed over Probabilistic Entity Resolution
 
 > **Status:** Accepted

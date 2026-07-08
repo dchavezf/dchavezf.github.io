@@ -1,3 +1,9 @@
+---
+layout: page
+title: "ADR-006: Deterministic Lineage Traversal over LLM Generation"
+permalink: /docs/adr/ADR-006-deterministic-lineage-over-llm-generation/
+---
+
 # ADR-006: Deterministic Lineage Traversal over LLM Generation
 
 > **Status:** Accepted

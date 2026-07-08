@@ -1,3 +1,9 @@
+---
+layout: page
+title: "ADR-002: Medallion + Kimball Hybrid over Data Vault 2.0"
+permalink: /docs/adr/ADR-002-medallion-kimball-over-data-vault/
+---
+
 # ADR-002: Medallion + Kimball Hybrid over Data Vault 2.0
 
 > **Status:** Accepted

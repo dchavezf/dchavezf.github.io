@@ -1,3 +1,9 @@
+---
+layout: page
+title: "ADR-001: ELT (Transform In-Warehouse) over ETL"
+permalink: /docs/adr/ADR-001-elt-over-etl/
+---
+
 # ADR-001: ELT (Transform In-Warehouse) over ETL
 
 > **Status:** Accepted
