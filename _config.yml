@@ -10,7 +10,6 @@ url: "https://dchavezf.github.io"
 theme: minima
 
 header_pages:
-  - index.md
   - projects/dbt-o2c-mdm.md
   - projects/airflow-iac-pipeline.md
   - projects/genai-rag-warehouse.md
