@@ -13,7 +13,7 @@ tags: [resume, data-architecture, data-engineering, ai-platforms, snowflake, gcp
 
 # Daniel Chavez Flores
 
-**Data Product Manager & Enterprise Data Architect | Analytics Discovery | BI & AI Platforms**
+**Enterprise Data Architect & AI Platform Engineer | Data Product Discovery | BI Modernization**
 
 San Luis Potosi, Mexico  
 [dchavezf@gmail.com](mailto:dchavezf@gmail.com) | [mx.linkedin.com/in/dchavezf](https://mx.linkedin.com/in/dchavezf) | [GitHub](https://github.com/dchavezf)
@@ -47,6 +47,13 @@ The portfolio shows the evidence behind this resume: a coherent MeridianTrade Gr
 | Leadership | Team leadership, executive stakeholder management, delivery planning, vendor coordination |
 
 ## Professional Experience
+
+### Independent Consulting
+
+**Enterprise Data Architect & AI Platform Engineer (B2B)** | May 2026 - Present
+
+- Designing and publishing a production-grade enterprise data platform reference implementation — ingestion (Airflow + Terraform), transformation (dbt + Snowflake/BigQuery), and GenAI over governed data (Claude API + RAG) — documented as a full [business case](/projects/transformation-business-case/), 11 architecture decision records, and three reviewable code repositories.
+- Advising on data platform architecture, BI modernization, and AI-augmented engineering workflows for B2B engagements.
 
 ### Infovision
 

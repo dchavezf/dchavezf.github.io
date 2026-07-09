@@ -4,7 +4,7 @@ lang: en
 timezone: America/Mexico_City
 
 title: DanielChavez.mx
-tagline: Data & Analytics Engineer
+tagline: Enterprise Data Architect & AI Platform Engineer
 description: >-
   Enterprise Data Architect & AI Platform Engineer. Working evidence of
   Fortune 500-scale data migration, modern ELT design, and applied GenAI
@@ -97,6 +97,11 @@ exclude:
   - docs/superpowers
   - docs/plan
   - brand-image
+  - resume/master-resume.md
+  - resume/star.md
+  - resume/star-pmo.md
+  - resume/memory.md
+  - about/
 
 jekyll-archives:
   enabled: [categories, tags]

@@ -36,7 +36,7 @@ I am not a ticket-taker. I am the strategic architect who closes the gap between
 * **AI-Augmented Data Operations:** If your data governance is broken, an LLM is just a faster, more expensive GIGO 2.0 machine. I deploy metadata-driven RAG architectures (Claude, Python, FastAPI) strictly to automate deterministic workflows, accelerating development cycles by 80% without sacrificing compliance.
 
 
-* **Systems, Not Dependencies:** If the system requires my physical presence to operate, it's not a system: it's a cage of labor dependency. I package raw human experience into parameterized engines that run consistently. For contractor engagements, my architectural expertise operates at a strict baseline of $30 USD per hour to ensure we focus purely on high-margin ROI rather than lowball negotiations.
+* **Systems, Not Dependencies:** If the system requires my physical presence to operate, it's not a system: it's a cage of labor dependency. I package raw human experience into parameterized engines that run consistently — which is why my engagements are scoped around outcomes and risk reduction, not hours on a clock.
 
 
 
@@ -47,6 +47,7 @@ The only true value of a Modern Data Stack (GCP, Snowflake, AWS, dbt, Airflow, P
 Information is power, but only if it is a replicable system.
 
 You are the product, not your code. The question isn't how much the data stored on your servers is worth. The real question is: **How much financial uncertainty and metric variance is your board willing to tolerate in the next quarter-end close?**
+
 ---
 
 ## Let's Connect
