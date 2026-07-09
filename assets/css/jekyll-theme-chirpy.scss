@@ -206,8 +206,7 @@ table tbody tr:hover {
 }
 
 table tbody tr:nth-child(even) {
-  background: var(--color-bg-subtle);
-  opacity: 0.5;
+  background: rgba(15, 155, 142, 0.03);
 }
 
 /* Mobile responsive tables */
@@ -274,5 +273,26 @@ table tbody tr:nth-child(even) {
     color: var(--color-primary);
     text-transform: capitalize;
     white-space: normal;
+  }
+}
+
+/* Extra small screens (phones < 480px) */
+@media (max-width: 480px) {
+  table td {
+    grid-template-columns: 100px 1fr;
+    gap: 0.75rem;
+  }
+
+  table tbody tr {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  table td::before {
+    font-size: 0.85rem;
+  }
+
+  table td {
+    font-size: 0.9rem;
   }
 }
