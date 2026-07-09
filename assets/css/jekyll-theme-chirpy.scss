@@ -162,6 +162,55 @@ code, pre, .highlighter-rouge {
   margin: 0;
 }
 
+/* Responsive tables - Desktop */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  display: block;
+}
+
+table thead {
+  background: var(--color-bg-subtle);
+  border-bottom: 2px solid var(--color-border);
+  display: table-header-group;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+  display: table-cell;
+  word-break: break-word;
+}
+
+table th {
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: normal;
+}
+
+table tbody {
+  display: table-row-group;
+}
+
+table tbody tr {
+  display: table-row;
+}
+
+table tbody tr:hover {
+  background: var(--color-bg-subtle);
+}
+
+table tbody tr:nth-child(even) {
+  background: var(--color-bg-subtle);
+  opacity: 0.5;
+}
+
+/* Mobile responsive tables */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
@@ -173,5 +222,57 @@ code, pre, .highlighter-rouge {
 
   .expertise-grid {
     grid-template-columns: 1fr;
+  }
+
+  table {
+    display: block;
+    border: none;
+    box-shadow: var(--shadow-sm);
+    margin: 1.5rem 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tbody {
+    display: block;
+  }
+
+  table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    background: var(--color-bg-card);
+  }
+
+  table tbody tr:nth-child(even) {
+    background: var(--color-bg-card);
+    opacity: 1;
+  }
+
+  table td {
+    display: grid;
+    grid-template-columns: minmax(120px, 30%) 1fr;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 1px solid var(--color-border-light);
+    word-break: break-word;
+  }
+
+  table td:last-child {
+    border-bottom: none;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: capitalize;
+    white-space: normal;
   }
 }
