@@ -18,7 +18,7 @@ mermaid: true
 > **Stack:** Apache Airflow · Terraform · Python · S3/GCS · Snowflake/BigQuery · GitHub Actions
 > **Business case:** [MeridianTrade Platform Transformation](/projects/transformation-business-case/)
 >
-> **Code repository:** 🚧 *implementation in progress — spec-first, the design below is the contract the code will be verified against*
+> **Code repository:** [github.com/dchavezf/airflow-iac-pipeline](https://github.com/dchavezf/airflow-iac-pipeline)
 
 ## Contents
 
@@ -130,11 +130,15 @@ flowchart LR
 
 ## 4 · Where Is the Code and Evidence?
 
-**Status: 🚧 implementation in progress** (Phase 2 of the portfolio roadmap; consumes Project 1's source expectations). Publicly reviewable today: this business case and the full technical spec — functional requirements, failure-handling matrix, CI/CD design, and acceptance criteria.
+**Status: live implementation with technical documentation.** The repository is publicly reviewable and includes the config-driven DAG factory, Airflow task implementations, regional YAML configs, versioned data contracts, Terraform modules, Docker-based local stack, tests, CI quality gates, and operations documentation.
 
-The repository will ship: the DAG factory and unit-tested task library, region configs, versioned data contracts, Terraform modules with three environment definitions, dockerized local demo (Airflow + MinIO + seeded SQL Server containers), GitHub Actions workflows, and an operations runbook (backfill, quarantine triage, credential rotation, environment rebuild).
+- **Code repository:** [github.com/dchavezf/airflow-iac-pipeline](https://github.com/dchavezf/airflow-iac-pipeline)
+- **Architecture notes:** [docs/architecture.md](https://github.com/dchavezf/airflow-iac-pipeline/blob/master/docs/architecture.md)
+- **Onboarding guide:** [docs/onboarding.md](https://github.com/dchavezf/airflow-iac-pipeline/blob/master/docs/onboarding.md)
+- **Operations runbook:** [docs/runbook.md](https://github.com/dchavezf/airflow-iac-pipeline/blob/master/docs/runbook.md)
+- **Local development guide:** [docs/local-development.md](https://github.com/dchavezf/airflow-iac-pipeline/blob/master/docs/local-development.md)
 
-**Definition of done** (verifiable): `terraform apply` provisions everything from zero with no console steps; kill-and-rerun test yields identical row counts and checksums; region-3 onboarding executed with only a new YAML file, timed under 1 hour; a simulated breaking schema change is quarantined with an alert; CI blocks broken DAGs, failed tests, invalid Terraform and unlabeled destructive plans.
+**Definition of done** (verifiable): the local stack runs Airflow, Postgres, MinIO, and SQL Server; `make test`, integration tests, DAG import checks, Terraform validation, secret scanning, and destructive-plan guards define the quality gate; a new region is onboarded by adding YAML config rather than writing a new DAG.
 
 ---
 

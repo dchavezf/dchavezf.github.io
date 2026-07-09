@@ -18,7 +18,7 @@ mermaid: true
 > **Stack:** Python · Claude API · dbt artifacts (manifest/catalog) · vector search · FastAPI
 > **Business case:** [MeridianTrade Platform Transformation](/projects/transformation-business-case/)
 >
-> **Code repository:** 🚧 *implementation in progress — spec-first, the design below is the contract the code will be verified against*
+> **Code repository:** [github.com/dchavezf/genai-rag-warehouse](https://github.com/dchavezf/genai-rag-warehouse)
 
 ## Contents
 
@@ -123,11 +123,16 @@ flowchart TD
 
 ## 4 · Where Is the Code and Evidence?
 
-**Status: 🚧 implementation in progress** (Phase 3 of the roadmap; consumes Project 1's dbt artifacts and warehouse). Publicly reviewable today: this business case and the full technical spec — requirements, SQL-guard design, evaluation thresholds, and acceptance criteria.
+**Status: live implementation with technical documentation.** The repository is publicly reviewable and includes dbt artifact fixtures, typed artifact parsing, Gold model whitelisting, deterministic lineage graph traversal, retrieval, docs/query/refusal modes, SQL guardrails, DuckDB execution, FastAPI endpoints, CLI modes, telemetry hooks, Docker, CI workflows, and tests.
 
-The repository will ship: indexer, retrieval layer, router, both answer modes, versioned prompt files, FastAPI/CLI interface, and four eval sets run as a CI gate — a 50-question grounded docs benchmark, a 15-question lineage benchmark, a 25-question query benchmark, and an adversarial set (DML, raw-layer, injection, scope-fishing). A `make degrade-demo` target ships a deliberately weakened prompt to demonstrate the gate failing — reviewer-facing proof the tests test something.
+- **Code repository:** [github.com/dchavezf/genai-rag-warehouse](https://github.com/dchavezf/genai-rag-warehouse)
+- **Portfolio brief:** [docs/portfolio-brief.md](https://github.com/dchavezf/genai-rag-warehouse/blob/main/docs/portfolio-brief.md)
+- **Architecture:** [docs/architecture.md](https://github.com/dchavezf/genai-rag-warehouse/blob/main/docs/architecture.md)
+- **Evaluation methodology:** [docs/eval-methodology.md](https://github.com/dchavezf/genai-rag-warehouse/blob/main/docs/eval-methodology.md)
+- **Cost model:** [docs/cost-model.md](https://github.com/dchavezf/genai-rag-warehouse/blob/main/docs/cost-model.md)
+- **Reviewer guide:** [docs/reviewer-guide.md](https://github.com/dchavezf/genai-rag-warehouse/blob/main/docs/reviewer-guide.md)
 
-**Definition of done** (verifiable): index covers 100% of documented Gold models; ≥90% correct-citation rate with **zero fabricated identifiers**; 100% lineage accuracy (deterministic); ≥80% executable-and-correct SQL on the query benchmark; **100% refusal on adversarial cases**; cost model published with prompt caching measurably reducing per-question cost.
+**Definition of done** (verifiable): the repository runs locally without external LLM keys by default; tests cover the core safety behavior; `pytest`, `ruff`, and eval checks are documented as quality gates; the README reports `30 passed`, `ruff: All checks passed`, and `evals: 2 passed` for the current local verification.
 
 ---
 

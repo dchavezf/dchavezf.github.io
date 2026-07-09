@@ -101,7 +101,7 @@ Every project page explicitly answers the five questions a reviewer needs: **the
 1. Skim this page for the map — you're almost done with that.
 2. Open any project and read its **90-second executive summary** — business language, quantified stakes.
 3. Read the **methodology and architecture decisions** if you want the engineering judgment.
-4. Then read the code (e.g. Project 1's live dbt repository linked from the project page) knowing exactly what it's supposed to do — the way specs are meant to work.
+4. Then read the code repositories linked from each project page knowing exactly what each implementation is supposed to do — the way specs are meant to work.
 
 ---
 
