@@ -139,12 +139,17 @@ flowchart TD
 
 ## 4 · Where Is the Code and Evidence?
 
-**Status: ✅ Live production-ready code.** The complete implementation is publicly reviewable:
+**Status: live implementation with technical documentation.** The repository is publicly reviewable and includes the full dbt project, MDM seed, SCD Type 2 snapshot, lineage macros, incremental fact model, Gold marts, custom data tests, CI workflow, FinOps notes, and project-level ADRs.
 
-- **Code Repository:** [github.com/dchavezf/marts_order_cycle](https://github.com/dchavezf/marts_order_cycle)
-- This repo contains the full dbt project, seeds for MDM customer cross-referencing, standard and custom data quality tests, incremental and merge materialization strategies, and SCD Type 2 history snapshots.
+- **Code repository:** [github.com/dchavezf/marts_order_cycle](https://github.com/dchavezf/marts_order_cycle)
+- **Technical specification:** [docs/spec.md](https://github.com/dchavezf/marts_order_cycle/blob/main/docs/spec.md)
+- **FinOps notes:** [docs/finops.md](https://github.com/dchavezf/marts_order_cycle/blob/main/docs/finops.md)
+- **Project ADRs:** [docs/adr/](https://github.com/dchavezf/marts_order_cycle/tree/main/docs/adr)
+- **CI workflow:** [.github/workflows/dbt-ci.yml](https://github.com/dchavezf/marts_order_cycle/blob/main/.github/workflows/dbt-ci.yml)
+- **Gold fact model:** [models/marts/finance/fct_order_cycle.sql](https://github.com/dchavezf/marts_order_cycle/blob/main/models/marts/finance/fct_order_cycle.sql)
+- **MDM stewardship queue:** [models/marts/finance/rpt_mdm_stewardship_queue.sql](https://github.com/dchavezf/marts_order_cycle/blob/main/models/marts/finance/rpt_mdm_stewardship_queue.sql)
 
-**Definition of done** (verifiable, not vibes): `dbt build` runs green with zero test failures; incremental runs process deltas only; data lineage and documentation are auto-generated.
+**Definition of done** (verifiable, not vibes): `dbt deps`, `dbt seed`, `dbt snapshot`, and `dbt build` run against a configured warehouse profile; custom tests guard duplicate enterprise customer IDs, orphaned order customers, inferred-member integrity, and unmapped-customer visibility; incremental builds can be compared against full-refresh behavior and documented in `docs/finops.md`.
 
 ---
 
