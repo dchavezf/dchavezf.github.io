@@ -25,6 +25,7 @@ Anyone can claim skills on a resume. This portfolio is the **working evidence**:
 - [The Business Case](#the-business-case)
 - [What Each Project Proves](#what-each-project-proves)
 - [How to Review This Portfolio](#how-to-review-this-portfolio)
+- [Delivery Lifecycle: Requirement to Runbook](#delivery-lifecycle-requirement-to-runbook)
 - [Hiring Signals at a Glance](#hiring-signals-at-a-glance)
 - [Architecture Decision Records](#architecture-decision-records)
 - [Contact](#contact)
@@ -102,6 +103,14 @@ Every project page explicitly answers the five questions a reviewer needs: **the
 2. Open any project and read its **90-second executive summary** — business language, quantified stakes.
 3. Read the **methodology and architecture decisions** if you want the engineering judgment.
 4. Then read the code repositories linked from each project page knowing exactly what each implementation is supposed to do — the way specs are meant to work.
+
+---
+
+## Delivery Lifecycle: Requirement to Runbook
+
+Documentation and code prove I can design and build. They don't by themselves prove I can *run the full delivery lifecycle* — PRD discipline, agile sequencing, release hygiene, production runbooks, honest retrospectives. That's a separate, harder claim, so it gets a separate page with every stage linked to a real artifact:
+
+[**→ See the full trace: business case → PRD → ADRs → backlog → code → release → runbook → retrospective**](/docs/delivery-lifecycle/)
 
 ---
 
